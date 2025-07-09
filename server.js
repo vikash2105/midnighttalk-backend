@@ -1,9 +1,4 @@
 // server.js
-import dotenv from "dotenv";
-dotenv.config(); // 🔥 Load .env
-
-console.log("✅ Loaded MONGO_URI:", process.env.MONGO_URI); // ✅ Debug check
-
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -12,6 +7,9 @@ import authRoutes from "./routes/authRoutes.js";
 
 // ✅ Load environment variables BEFORE using them
 dotenv.config();
+
+// ✅ Debug log to verify MONGO_URI is loaded
+console.log("✅ Loaded MONGO_URI:", process.env.MONGO_URI);
 
 // ✅ Initialize Express app
 const app = express();
